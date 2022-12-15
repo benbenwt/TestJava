@@ -29,5 +29,8 @@ public class MyProxyHandler implements InvocationHandler {
         NowTimeInterface proxyHello = (NowTimeInterface) Proxy.newProxyInstance(nowTime.getClass().getClassLoader(), nowTime.getClass().getInterfaces(), handler);
 
         proxyHello.printTime();
+
+        Integer i;
+        String s;
     }
 }

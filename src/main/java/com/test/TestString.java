@@ -3,6 +3,12 @@ package com.test;
 
 public class TestString {
     public static void main(String[] args) {
+        Object [] a=new Object[10];
+        a[0]=new Integer(1);
+        a[1]="hello";
+        System.out.println(a[0]);
+        System.out.println(a[1]);
+
         String str1="hello";
         String str2="hello";
         String str3=new String("hello");

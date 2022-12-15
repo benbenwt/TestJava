@@ -28,7 +28,14 @@ class MyThread3 implements Callable<String>{
     }
 }
 public class TestThread {
+    public synchronized void test(){
 
+        synchronized (this){
+            System.out.println(1);
+
+        }
+    }
+    int count=0;
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         MyThread t1=new MyThread();
         t1.setName("thread-extends");
@@ -54,6 +61,10 @@ public class TestThread {
         ReentrantLock lock=new ReentrantLock();
         Condition condition=lock.newCondition();
         condition.await();
+        lock.lock();
+        lock.wait();
+
 
     }
+
 }

@@ -32,7 +32,7 @@ public class TestClassOrder extends Parent {
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Class.forName("com.test.Parent");
+//        Class.forName("com.test.Parent");
         System.out.println("----");
         TestClassOrder t=new TestClassOrder();
         System.out.println("----");
